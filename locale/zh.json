@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "额度恢复自动续跑",
+    "description": "额度或限流中断任务后自动接着干：短冷却在同一轮里静默重试；5 小时、每周、每月这类窗口额度则先暂停当前轮，到预计重置时间自动给同一会话发一条“继续”指令，届时仍受限就按更长的间隔再次探测。判定基于 LLM 层的 QUOTA / ACCOUNT_QUOTA / RATE_LIMIT 失败码，对官方 DeepSeek、OpenCode Go 以及任何归入这些码的 OpenAI 兼容路由都适用。",
+    "detail": "docs/DETAIL.md"
+  }
+}
