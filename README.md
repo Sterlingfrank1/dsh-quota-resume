@@ -23,12 +23,16 @@ Host 关闭期间错过的那次，会在下次启动时补投。
 
 要求 DeepSeek Harness 已装好并至少运行过一次（存在 profile）。
 
+**从 npm 安装**（推荐）：让 `plugin_manager` 的 `install_bundle` 指向 `dsh-quota-resume`，
+它会按当前版本装进 profile。
+
+**从目录安装**（本地开发用）：
+
 1. 打开 **插件（Plugins）**；
 2. **添加插件（Add plugin）**；
 3. 选择本仓库目录（或克隆后的目录）。
 
-命令行等价做法：让 `plugin_manager` 的 `install_bundle` 指向本目录。安装后
-`package.json` 会把本包链接进 profile，并在 `cordis.patch.yml` 中插入 `quota-resume` 一行。
+两种方式都会把本包链接进 profile，并在 `cordis.patch.yml` 中插入 `quota-resume` 一行。
 
 ## 配置
 
@@ -96,4 +100,4 @@ node --test test/decide.test.mjs test/runtime.test.mjs
 
 ## 许可
 
-暂未添加 LICENSE。需要的话请明确用哪一个（例如 MIT）。
+[MIT](LICENSE) © 2026 Sterlingfrank1

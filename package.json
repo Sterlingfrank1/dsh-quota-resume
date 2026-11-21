@@ -4,14 +4,29 @@
   "type": "module",
   "description": "DeepSeek Harness 插件：额度或限流中断任务后自动接着干——短冷却在同一轮里静默重试，5 小时/周/月这类窗口额度则先暂停，到预计重置时间自动给会话发一条“继续”指令，仍受限就按更长的间隔再次探测。",
   "icon": "icon.svg",
+  "license": "MIT",
+  "author": "Sterlingfrank1",
+  "homepage": "https://github.com/Sterlingfrank1/dsh-quota-resume#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sterlingfrank1/dsh-quota-resume.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Sterlingfrank1/dsh-quota-resume/issues"
+  },
   "keywords": [
     "dsh-plugin",
     "deepseek-harness",
+    "cordis",
     "quota",
     "rate-limit",
     "resume",
     "opencode-go"
   ],
+  "engines": {
+    "node": ">=20",
+    "dsh": ">=0.2.2-rc.5"
+  },
   "exports": {
     ".": "./index.js",
     "./locale/*.json": "./locale/*.json",
