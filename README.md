@@ -1,5 +1,8 @@
 # 额度恢复自动续跑
 
+[![npm](https://img.shields.io/npm/v/dsh-quota-resume.svg)](https://www.npmjs.com/package/dsh-quota-resume)
+[![license](https://img.shields.io/npm/l/dsh-quota-resume.svg)](LICENSE)
+
 当模型请求因为**额度或限流**失败时，让任务自己继续跑，不需要人工再敲一句“继续”。
 
 插件不区分厂商，只读 LLM 层已经归一化的失败码（`QUOTA`、`ACCOUNT_QUOTA`、`RATE_LIMIT`），
@@ -24,7 +27,7 @@ Host 关闭期间错过的那次，会在下次启动时补投。
 要求 DeepSeek Harness 已装好并至少运行过一次（存在 profile）。
 
 **从 npm 安装**（推荐）：让 `plugin_manager` 的 `install_bundle` 指向 `dsh-quota-resume`，
-它会按当前版本装进 profile。
+它会按当前版本装进 profile。也可以直接在 profile 目录里 `npm install dsh-quota-resume`。
 
 **从目录安装**（本地开发用）：
 
